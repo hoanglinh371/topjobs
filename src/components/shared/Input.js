@@ -1,10 +1,17 @@
-import React from 'react';
-
-const Input = () => {
+import React from "react";
+import searchIconSrc from "../../assets/desktop/icon-search.svg";
+import locationIconSrc from "../../assets/desktop/icon-location.svg";
+import "./Input.css";
+const Input = (props) => {
+  const { placeholder } = props;
   return (
-    <div>
-      <p>Input works!</p>
-    </div>
+    <label className="inputLabel">
+      <img
+        src={props.id === "filterByInfos" ? searchIconSrc : locationIconSrc}
+        alt={`${props.id} icon`}
+      />
+      <input placeholder={placeholder}></input>
+    </label>
   );
 };
 

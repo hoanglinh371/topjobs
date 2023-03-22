@@ -1,10 +1,30 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
+import CompanyLogo from "./CompanyLogo";
+import JobInfos from "./JobInfos";
+import "./JobCard.css";
 
-const JobCard = () => {
+const JobCard = (props) => {
+  const {
+    contract,
+    createdAt,
+    logo,
+    logoBackground,
+    id,
+    position,
+    company,
+    location,
+  } = props;
   return (
-    <div>
-      <p>JobCard works!</p>
-    </div>
+    <article className="jobCard">
+      <CompanyLogo logo={logo} logoBackground={logoBackground} small />
+      <JobInfos createdAt={createdAt} contract={contract} />
+      <Link to={`/${id}`}>
+        <h3 className="jobCardPosition">{position}</h3>
+      </Link>
+      <p>{company}</p>
+      <h4 className="jobCardLocation">{location}</h4>
+    </article>
   );
 };
 

@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import Footer from '../shared/Footer';
+// import Button from "../shared/Button";
+// import JobInfos from "../shared/JobInfos";
+import "./JobDescription.css";
 
-const JobDescription = () => {
-  return (
-    <div>
-      <p>JobDescription works!</p>
-      <Footer />
-    </div>
-  );
+import "../shared/Footer.css";
+
+const JobDescription = (props) => {
+  return <></>;
 };
 
 export default JobDescription;

@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
+import "./Button.css";
 
-const Button = () => {
-  return (
-    <div>
-      <p>Button works!</p>
-    </div>
-  );
+const Button = (props) => {
+  const { children } = props;
+  return <button className="button buttonPrimary">{children}</button>;
 };
 
 export default Button;
