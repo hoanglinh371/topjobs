@@ -20,17 +20,9 @@ const JobContent = (props) => {
         <p>{props.description}</p>
       </div>
 
-      {/*  */}
-
       <div>
         <h3>Requirements</h3>
-        {/* <p>{props.requirements.content}</p>  */}
-      </div>
-      <div>Dat Maid</div>
-
-      {/* <div>
-        <h3>Requirements</h3>
-        <p>{props.requirements.content}</p>
+        <p>{props.requirements["content"]}</p>
         <ul>
           {props.requirements.items.map((item, index) => (
             <li key={index}>
@@ -39,8 +31,8 @@ const JobContent = (props) => {
             </li>
           ))}
         </ul>
-      </div> */}
-      {/* <div>
+      </div>
+      <div>
         <h3>What You Will Do</h3>
         <p>{props.role.content}</p>
         <ol>
@@ -51,7 +43,7 @@ const JobContent = (props) => {
             </li>
           ))}
         </ol>
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -1,10 +1,19 @@
-.jobBottomBanner {
+.mr-footer {
   box-sizing: content-box;
-  width: min(80rem, 100%);
   display: flex;
-  justify-content: space-between;
-  padding: 3rem 0;
-  margin: 8rem auto 0;
+  justify-content: space-evenly;
+  padding: 4rem 0;
+  margin: 3rem auto 0;
+}
+.footer {
+  width: 100%;
+  background-color: var(--background-color-elements);
+  transition: 0.2s linear;
+  padding: var(--padding-layout);
+}
+
+.child-footer p {
+  margin-top: 25px;
 }
 
 @media (max-width: 48.12em) {

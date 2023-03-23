@@ -1,0 +1,8 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12.2rem;
+  padding: var(--padding-layout);
+}

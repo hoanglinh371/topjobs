@@ -20,7 +20,8 @@
 }
 
 .jobCardPosition {
-  padding: 1.2rem 0;
+  padding: 1.6rem 0;
+  font-weight: bold;
 }
 
 .jobCardPosition:hover {

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Logo from "./Logo";
 import Toggle from "./Toggle";
 import "./HeaderBG.css";
+import "./Header.css";
 
 const Header = () => {
   const [theme, setTheme] = useState("light");
@@ -19,10 +20,10 @@ const Header = () => {
   return (
     <div>
       <div className="backSVGContainer"></div>
-      <header>
+      <div className="header">
         <Logo />
         <Toggle activeTheme={theme} onChangeTheme={changeThemeHandler} />
-      </header>
+      </div>
     </div>
   );
 };

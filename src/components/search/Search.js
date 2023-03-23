@@ -6,7 +6,7 @@ import Button from "../shared/Button";
 
 const Search = () => {
   return (
-    <main>
+    <div className="main">
       <form className="searchBarContainer">
         <section className="searchBar">
           <Input
@@ -18,7 +18,7 @@ const Search = () => {
           <Button>Search</Button>
         </section>
       </form>
-    </main>
+    </div>
   );
 };
 

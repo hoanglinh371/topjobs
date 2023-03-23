@@ -5,8 +5,8 @@
 }
 
 .companyLogoSmall {
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: var(--border-radius-l);
   margin-bottom: 2.2rem;
 }

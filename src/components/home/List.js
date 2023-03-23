@@ -20,13 +20,13 @@ const List = (props) => {
   }, []);
 
   return (
-    <main>
+    <div className="main-list">
       <section className="jobsGrid">
         {jobs.map((job) => (
           <JobCard key={job._id} {...job}></JobCard>
         ))}
       </section>
-    </main>
+    </div>
   );
 };
 

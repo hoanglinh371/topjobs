@@ -53,6 +53,15 @@
   padding: 0 var(--padding-search-bar-items) var(--padding-search-bar-items);
 }
 
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+  padding: var(--padding-layout);
+}
+
 @media (max-width: 48.12em) {
   .searchBar {
     /* padding: 1.2rem;

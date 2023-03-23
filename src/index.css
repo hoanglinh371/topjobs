@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap");
 
 :root {
   --color-violet: #5964e0;
@@ -17,9 +17,9 @@
   --line-height-h1: 3.4rem;
   --font-size-h2: 2.4rem;
   --line-height-h2: 2.9rem;
-  --font-size-h3: 2rem;
+  --font-size-h3: 2.3rem;
   --line-height-h3: 2.4rem;
-  --font-size-h4: 1.4rem;
+  --font-size-h4: 1.8rem;
   --line-height-h4: 1.8rem;
   --font-size-body: 1.6rem;
   --line-height-body: 2.6rem;
@@ -80,36 +80,17 @@ body {
   --color-btn-2: var(--color-white);
 }
 
-header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 12.2rem;
-  padding: var(--padding-layout);
+p,
+a,
+li {
+  font-size: 18px;
 }
-
-main {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 10rem;
-  padding: var(--padding-layout);
-}
-
-footer {
-  width: 100%;
-  background-color: var(--background-color-elements);
-  transition: 0.2s linear;
-  padding: var(--padding-layout);
-}
-
 h1,
 h2,
 h3 {
   color: var(--color-text);
   transition: 0.2s linear;
+  font-weight: bold;
 }
 
 h1 {

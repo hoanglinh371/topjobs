@@ -8,8 +8,9 @@ import Company from "./Company";
 
 import "../shared/Footer.css";
 import JobContent from "./JobContent";
+import Footer from "../shared/Footer";
 
-const JobDescription = (props) => {
+const JobDescription = () => {
   const { id } = useParams();
   const [job, setJob] = React.useState();
 
@@ -18,19 +19,23 @@ const JobDescription = (props) => {
       const url = `https://topjob-api.onrender.com/api/v1/jobs/${id}`;
       const data = await axios.get(url);
       setJob(data.data.metadata.job);
-      console.log(data.data.metadata.job);
     };
     fetchData();
   }, [id]);
 
   return (
     <>
-      <div className="flex flex-column items-center justify-center">
-        <Company {...job} />
-      </div>
-      <div className="flex flex-column items-center justify-center">
-        <JobContent {...job} />
-      </div>
+      {job && (
+        <div>
+          <div className="flex flex-column items-center justify-center">
+            <Company {...job} />
+          </div>
+          <div className="flex flex-column items-center justify-center">
+            <JobContent {...job} />
+          </div>
+          <Footer {...job} />
+        </div>
+      )}
     </>
   );
 };
