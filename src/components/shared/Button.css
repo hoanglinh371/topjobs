@@ -8,6 +8,14 @@
   transition: 0.2s linear;
 }
 
+.button.edit {
+  background-color: green;
+}
+
+.button.delete {
+  background-color: red;
+}
+
 .buttonPrimary {
   color: var(--color-white);
   background-color: var(--color-violet);

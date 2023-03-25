@@ -8,11 +8,18 @@ import Register from './components/auth/Register';
 import Home from './components/home/Home';
 import JobDescription from './components/home/JobDescription';
 import List from './components/home/List';
+import ResetPw from './components/auth/ResetPassword';
+import Header from './components/shared/Header';
 
 const AppRouter = createBrowserRouter([
   {
     path: '',
-    element: <Home />,
+    element: (
+      <>
+        <Header />
+        <Home />
+      </>
+    ),
     children: [
       {
         path: '',
@@ -35,6 +42,7 @@ const AppRouter = createBrowserRouter([
       { path: 'login', element: <Login /> },
       { path: 'registration', element: <Register /> },
       { path: 'forgot-password', element: <ForgotPassword /> },
+      { path: 'reset-password/:id', element: <ResetPw /> },
     ],
   },
 ]);

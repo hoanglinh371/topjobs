@@ -1,8 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import CompanyLogo from "./CompanyLogo";
-import JobInfos from "./JobInfos";
-import "./JobCard.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import CompanyLogo from './CompanyLogo';
+import JobInfos from './JobInfos';
+import './JobCard.css';
+import Button from '../shared/Button';
 
 const JobCard = (props) => {
   const {
@@ -16,14 +17,16 @@ const JobCard = (props) => {
     location,
   } = props;
   return (
-    <article className="jobCard">
+    <article className='jobCard'>
       <CompanyLogo logo={logo} logoBackground={logoBackground} small />
       <JobInfos createdAt={createdAt} contract={contract} />
       <Link to={`/${id}`}>
-        <h3 className="jobCardPosition">{position}</h3>
+        <h3 className='jobCardPosition'>{position}</h3>
       </Link>
       <p>{company}</p>
-      <h4 className="jobCardLocation">{location}</h4>
+      <h4 className='jobCardLocation'>{location}</h4>
+      <Button variant='edit'>Edit</Button>
+      <Button variant='delete'>Delete</Button>
     </article>
   );
 };
