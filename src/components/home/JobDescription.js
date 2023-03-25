@@ -1,19 +1,14 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import React from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 // import Button from "../shared/Button";
 // import JobInfos from "../shared/JobInfos";
-import './JobDescription.css';
-import Company from './Company';
+import "./JobDescription.css";
+import Company from "./Company";
 
-<<<<<<< HEAD
 import "../shared/Footer.css";
 import JobContent from "./JobContent";
 import Footer from "../shared/Footer";
-=======
-import '../shared/Footer.css';
-import JobContent from './JobContent';
->>>>>>> b8602aad848927fd4fb0d234ad3ee1520f4581d1
 
 const JobDescription = () => {
   const { id } = useParams();

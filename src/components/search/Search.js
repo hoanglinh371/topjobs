@@ -5,6 +5,8 @@ import CheckBox from "../shared/CheckBox";
 import Button from "../shared/Button";
 
 const Search = () => {
+  // const [search, setSearch] = React.useState("");
+
   return (
     <div className="main">
       <form className="searchBarContainer">

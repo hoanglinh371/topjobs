@@ -10,7 +10,12 @@ const List = (props) => {
   React.useEffect(() => {
     const fetchData = async () => {
       const url = "https://topjob-api.onrender.com/api/v1/jobs";
-      const data = await axios.get(url);
+      const data = await axios.get(url, {
+        headers: {
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFkNDc3MjliY2JhY2Y2N2IxOGQwMzYiLCJpYXQiOjE2Nzk2NDA0MzgsImV4cCI6MTY4NzQxNjQzOH0.RjQOxrz1-nTBtq5odHE-bBpIgRIDwsM_5a7e3Z_KEAw",
+        },
+      });
 
       console.log(data.data.metadata.jobs);
 
