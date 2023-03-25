@@ -1,15 +1,9 @@
 import React from "react";
-import "../auth/auth.css";
+import "./Button.css";
 
 const Button = (props) => {
-  const { children, onClick } = props;
-  return (
-    <div className="inputBox">
-      <button onClick={onClick} type="button">
-        {children}
-      </button>
-    </div>
-  );
+  const { children } = props;
+  return <button className="button buttonPrimary">{children}</button>;
 };
 
 export default Button;

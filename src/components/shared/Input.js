@@ -1,17 +1,17 @@
 import React from "react";
-import "../auth/auth.css";
-
+import searchIconSrc from "../../assets/desktop/icon-search.svg";
+import locationIconSrc from "../../assets/desktop/icon-location.svg";
+import "./Input.css";
 const Input = (props) => {
-  const { name, type, placeholder, onChange } = props;
+  const { placeholder } = props;
   return (
-    <div className="inputBox">
-      <input
-        onChange={onChange}
-        value={name}
-        type={type}
-        placeholder={placeholder}
+    <label className="inputLabel">
+      <img
+        src={props.id === "filterByInfos" ? searchIconSrc : locationIconSrc}
+        alt={`${props.id} icon`}
       />
-    </div>
+      <input placeholder={placeholder}></input>
+    </label>
   );
 };
 
