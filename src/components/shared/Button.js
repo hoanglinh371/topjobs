@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
+import "../auth/auth.css";
 
-const Button = () => {
+const Button = (props) => {
+  const { children, onClick } = props;
   return (
-    <div>
-      <p>Button works!</p>
+    <div className="inputBox">
+      <button onClick={onClick} type="button">
+        {children}
+      </button>
     </div>
   );
 };
