@@ -7,16 +7,16 @@
   min-width: 40rem;
 }
 
-.inputLabel[for="filterByInfos"] {
+.inputLabel[for='filterByInfos'] {
   flex-grow: 5;
 }
 
-.inputLabel[for="filterByLocation"] {
+.inputLabel[for='filterByLocation'] {
   flex-grow: 1;
 }
 
 .inputLabel::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -37,6 +37,10 @@
 
 .inputField::placeholder {
   color: #8c8f96;
+}
+
+.form-field::placeholder {
+  color: #ffffff;
 }
 
 @media (max-width: 48.12em) {

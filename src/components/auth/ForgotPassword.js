@@ -34,6 +34,7 @@ const ForgotPassword = () => {
             onChange={handleChangeEmail}
             type='Email'
             placeholder='EnterEmail'
+            isFormField
           />
         </div>
         <Button onClick={handleClick}>Comfirm</Button>
