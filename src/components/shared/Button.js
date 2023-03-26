@@ -1,10 +1,21 @@
 import React from 'react';
+import './Button.css';
 
-const Button = () => {
+const BUTTON_TYPES = {
+  edit: 'edit',
+  delete: 'delete',
+};
+
+const Button = (props) => {
+  const { children, variant } = props;
   return (
-    <div>
-      <p>Button works!</p>
-    </div>
+    <button
+      type='button'
+      className={`button buttonPrimary ${BUTTON_TYPES[variant]}`}
+      onClick={props.onClick}
+    >
+      {children}
+    </button>
   );
 };
 

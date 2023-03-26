@@ -1,0 +1,25 @@
+.button {
+  width: 14rem;
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  border-radius: var(--border-radius-xs);
+  padding: 1.6rem;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+.button.edit {
+  background-color: green;
+}
+
+.button.delete {
+  background-color: red;
+}
+
+.buttonPrimary {
+  color: var(--color-white);
+  background-color: var(--color-violet);
+}
+.buttonPrimary:hover {
+  background-color: var(--color-light-violet);
+}

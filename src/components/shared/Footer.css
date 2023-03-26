@@ -1,0 +1,32 @@
+.mr-footer {
+  box-sizing: content-box;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4rem 0;
+  margin: 3rem auto 0;
+}
+.footer {
+  width: 100%;
+  background-color: var(--background-color-elements);
+  transition: 0.2s linear;
+  padding: var(--padding-layout);
+}
+
+.child-footer p {
+  margin-top: 25px;
+}
+
+@media (max-width: 48.12em) {
+  .jobBottomBanner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .jobBottomBanner button {
+    width: 100% !important;
+  }
+
+  .jobDescription {
+    display: none;
+  }
+}

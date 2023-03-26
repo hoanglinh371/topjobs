@@ -1,10 +1,27 @@
 import React from 'react';
 
-const Company = () => {
+import CompanyLogo from '../shared/CompanyLogo';
+import styles from './Company.module.css';
+import Button from '../shared/Button';
+
+const Company = (props) => {
   return (
-    <div>
-      <p>Company works!</p>
-    </div>
+    <section className={styles.companyHeader}>
+      <CompanyLogo
+        logo={props.logo}
+        logoBackground={props.logoBackground}
+        big
+      />
+      <div className={styles.companyHeaderInfos}>
+        <div>
+          <h2>{props.company}</h2>
+          <p>{props.website}</p>
+        </div>
+        <a href={props.website} target='_blank' rel='noreferrer'>
+          <Button secondary>Company Site</Button>
+        </a>
+      </div>
+    </section>
   );
 };
 

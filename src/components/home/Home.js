@@ -1,17 +1,14 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
-import List from './List';
-import JobDescription from './JobDescription';
+import Search from '../search/Search';
 
 const Home = () => {
   return (
-    <div>
-      <Routes>
-        <Route path='/' element={<List />} />
-        <Route path='/:id' element={<JobDescription />} />
-      </Routes>
-    </div>
+    <>
+      <Search />
+      <Outlet />
+    </>
   );
 };
 
