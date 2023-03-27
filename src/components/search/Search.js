@@ -3,9 +3,20 @@ import style from './Search.module.css';
 import Input from '../shared/Input';
 import CheckBox from '../shared/CheckBox';
 import Button from '../shared/Button';
+import axiosClient from '../../api/axios.client';
 
-const Search = () => {
-  // const [search, setSearch] = React.useState("");
+const Search = ({ search, setJobs }) => {
+  const [position, setPosition] = React.useState('');
+
+  const handleSearch = async () => {
+    const data = await axiosClient.get('/jobs', {
+      params: {
+        position,
+      },
+    });
+
+    setJobs(data.data.metadata.jobs);
+  };
 
   return (
     <div className={style.main}>
@@ -13,11 +24,15 @@ const Search = () => {
         <div className={style.searchBar}>
           <Input
             id='filterByInfos'
-            placeholder='Filter by title, companies, expertise...'
+            placeholder='Filter by position'
+            onChange={(e) => setPosition(e.target.value)}
           />
-          <Input placeholder='Filter by location...' />
+          {/* <Input
+            placeholder='Filter by location...'
+            onChange={(e) => setLocation(e.target.value)}
+          /> */}
           <CheckBox />
-          <Button>Search</Button>
+          <Button onClick={handleSearch}>Search</Button>
         </div>
       </form>
     </div>

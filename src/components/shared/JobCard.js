@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import CompanyLogo from './CompanyLogo';
 import JobInfos from './JobInfos';
 import './JobCard.css';
-import Button from '../shared/Button';
 
 const JobCard = (props) => {
   const {
@@ -25,8 +24,6 @@ const JobCard = (props) => {
       </Link>
       <p>{company}</p>
       <h4 className='jobCardLocation'>{location}</h4>
-      <Button variant='edit'>Edit</Button>
-      <Button variant='delete'>Delete</Button>
     </article>
   );
 };

@@ -4,7 +4,7 @@ import locationIconSrc from '../../assets/desktop/icon-location.svg';
 import './Input.css';
 
 const Input = (props) => {
-  const { placeholder, isFormField } = props;
+  const { type, placeholder, isFormField, value } = props;
   return (
     <label className='inputLabel'>
       {isFormField ? null : (
@@ -15,9 +15,11 @@ const Input = (props) => {
       )}
       {isFormField ? (
         <input
-          className='form-field'
+          type={type}
+          className={`inputBox ${isFormField ? 'form-field' : null}`}
           placeholder={placeholder}
           onChange={props.onChange}
+          value={value}
           style={{ color: '#ffffff' }}
         ></input>
       ) : (

@@ -11,11 +11,11 @@
   overflow: hidden;
 } */
 
-/* section {
+.section {
   display: flex;
   width: 100%;
   min-height: 100vh;
-} */
+}
 
 /* Form */
 .container-form {

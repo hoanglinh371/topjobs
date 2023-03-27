@@ -10,6 +10,8 @@ import JobDescription from './components/home/JobDescription';
 import List from './components/home/List';
 import ResetPw from './components/auth/ResetPassword';
 import Header from './components/shared/Header';
+import UserInfo from './components/home/UserInfo';
+import UpdatePassword from './components/auth/UpdatePassword';
 
 const AppRouter = createBrowserRouter([
   {
@@ -36,6 +38,15 @@ const AppRouter = createBrowserRouter([
     element: <Admin />,
   },
   {
+    path: 'me',
+    element: (
+      <>
+        <Header />
+        <UserInfo />
+      </>
+    ),
+  },
+  {
     path: 'auth',
     element: <Auth />,
     children: [
@@ -43,6 +54,10 @@ const AppRouter = createBrowserRouter([
       { path: 'registration', element: <Register /> },
       { path: 'forgot-password', element: <ForgotPassword /> },
       { path: 'reset-password/:id', element: <ResetPw /> },
+      {
+        path: 'update-password',
+        element: <UpdatePassword />,
+      },
     ],
   },
 ]);

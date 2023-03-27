@@ -33,14 +33,6 @@
   --padding-search-bar-items: 2rem 3.2rem;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;

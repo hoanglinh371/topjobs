@@ -6,7 +6,6 @@ const Admin = () => {
   return (
     <div>
       <p>Admin works!</p>
-      <List />
     </div>
   );
 };

@@ -28,7 +28,7 @@ const ForgotPassword = () => {
   return (
     <Section>
       <div>
-        <h1 className='text-2xl font-bold my-5 text-white'>Forget Password</h1>
+        <h1 className='text-4xl font-bold my-5 text-white'>Forget Password</h1>
         <div className='pt-1'>
           <Input
             onChange={handleChangeEmail}
